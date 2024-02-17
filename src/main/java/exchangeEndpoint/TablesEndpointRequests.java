@@ -22,11 +22,15 @@ public class TablesEndpointRequests extends CommonRequestSpecification {
     }
 
     public Response sendGetSpecificTableRequest(Tables tables) {
-        return given().spec(getTablesEndpointRequestSpec()).when().get(tables.getSpecificTableEndpoint());
+        return given().
+                spec(getTablesEndpointRequestSpec()).
+                when().
+                get(tables.getSpecificTableEndpoint());
     }
 
     private RequestSpecification getTablesEndpointRequestSpec() {
-        return new RequestSpecBuilder().addRequestSpecification(getCommonRequestSpecification(environmentProperties)).
+        return new RequestSpecBuilder().
+                addRequestSpecification(getCommonRequestSpecification(environmentProperties)).
                 setBasePath(basePath).
                 build();
     }

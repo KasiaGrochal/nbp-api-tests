@@ -18,6 +18,10 @@ public enum Tables {
     }
 
     public static Tables getTableByTableType(String tableType){
-        return Arrays.stream(Tables.values()).filter(x-> x.getSpecificTableEndpoint().equals(tableType)).findFirst().orElseThrow();
+        return Arrays.
+                stream(Tables.values()).
+                filter(x-> x.getSpecificTableEndpoint().equals(tableType)).
+                findFirst().
+                orElseThrow();
     }
 }

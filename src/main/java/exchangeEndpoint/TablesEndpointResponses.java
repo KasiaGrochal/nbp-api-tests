@@ -25,7 +25,6 @@ public class TablesEndpointResponses {
     }
 
     public Rate getRateFromTableForGivenCurrencyName(String currencyName) {
-        ;
         return rates.stream().
                 filter(x -> x.getCurrency().equals(currencyName)).
                 findFirst().
@@ -47,6 +46,8 @@ public class TablesEndpointResponses {
     }
 
     private static ArrayList<Rate> getListOfRates(Response response) {
-        return JsonLoader.getTableFromResponse(response).getRates();
+        return JsonLoader.
+                getTableFromResponse(response).
+                getRates();
     }
 }
