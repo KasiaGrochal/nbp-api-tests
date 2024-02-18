@@ -1,7 +1,7 @@
-package stepDefinitions;
+package stepDefinitions.tablesEndpointSteps;
 
 import enums.CurrencyCodes;
-import exchangeEndpoint.TablesEndpointResponses;
+import tablesEndpoint.TablesEndpointResponses;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;

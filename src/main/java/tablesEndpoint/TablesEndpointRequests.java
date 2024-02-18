@@ -1,4 +1,4 @@
-package exchangeEndpoint;
+package tablesEndpoint;
 
 import commons.RestBase;
 import configuration.models.EnvironmentProperties;

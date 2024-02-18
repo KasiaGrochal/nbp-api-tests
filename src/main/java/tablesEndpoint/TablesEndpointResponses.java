@@ -1,4 +1,4 @@
-package exchangeEndpoint;
+package tablesEndpoint;
 
 import io.restassured.response.Response;
 import loaders.JsonLoader;
