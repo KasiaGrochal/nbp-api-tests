@@ -2,5 +2,5 @@ environmentProperties:
   expectedResponseTime: 10000
   baseUri: http://api.nbp.pl/api/
   pathToExchangeRates: exchangerates/
-  pathToTables: tables/
+  pathToTables: tables
 

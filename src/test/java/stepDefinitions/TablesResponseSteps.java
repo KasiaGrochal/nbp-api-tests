@@ -16,7 +16,7 @@ public class TablesResponseSteps {
     public TablesResponseSteps(Container container) {
         this.container = container;
         response = container.response;
-        this.tablesEndpointResponses = new TablesEndpointResponses(response);
+        tablesEndpointResponses = new TablesEndpointResponses(response);
     }
 
     @When("I filter response to get values for currency code {string}")

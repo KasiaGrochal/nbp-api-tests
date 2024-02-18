@@ -11,16 +11,15 @@ import stepDefinitions.testBase.Hooks;
 
 @Slf4j
 public class TablesEndPointSteps {
+
     private Response response;
-
     private TablesEndpointRequests tablesEndpointRequests;
-
     private EnvironmentProperties environmentProperties;
     private Container container;
 
     public TablesEndPointSteps(Container container) {
-        this.environmentProperties = Hooks.environmentProperties;
-        this.tablesEndpointRequests = new TablesEndpointRequests(environmentProperties);
+        environmentProperties = Hooks.environmentProperties;
+        tablesEndpointRequests = new TablesEndpointRequests(environmentProperties);
         this.container = container;
     }
 
