@@ -1,22 +1,19 @@
 package stepDefinitions.tablesEndpointSteps;
 
 import enums.CurrencyCodes;
-import tablesEndpoint.TablesEndpointResponses;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.response.Response;
 import stepDefinitions.testBase.Container;
+import tablesEndpoint.TablesEndpointResponses;
 
 public class TablesResponseSteps {
 
-    private Response response;
     private Container container;
     private TablesEndpointResponses tablesEndpointResponses;
 
     public TablesResponseSteps(Container container) {
         this.container = container;
-        response = container.response;
-        tablesEndpointResponses = new TablesEndpointResponses(response);
+        tablesEndpointResponses = new TablesEndpointResponses(container.response);
     }
 
     @When("I filter response to get values for currency code {string}")

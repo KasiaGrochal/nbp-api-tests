@@ -11,8 +11,7 @@ public class JsonLoader {
 
     public static Table getTableFromResponse(Response response) {
         try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            Table[] tables = objectMapper.readValue(response.asString(), Table[].class);
+            Table[] tables = new ObjectMapper().readValue(response.asString(), Table[].class);
             return tables[0];
         } catch (JsonProcessingException e) {
             log.error("Caught exception while loading response to Table model");

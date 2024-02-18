@@ -1,10 +1,8 @@
 package stepDefinitions.testBase;
 
-import commons.RestBase;
 import configuration.ConfigReader;
 import configuration.models.EnvironmentProperties;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 import lombok.Data;
@@ -22,12 +20,6 @@ public class Hooks {
         log.info("Initializing environment properties");
         environmentProperties = new ConfigReader().getConfig().getEnvironmentProperties();
     }
-
-    @Before
-    public void setup() {
-        RestBase restBase = new RestBase(environmentProperties);
-    }
-
 
     @After
     public void tearDown(Scenario scenario) {

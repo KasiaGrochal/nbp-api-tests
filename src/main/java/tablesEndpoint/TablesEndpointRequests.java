@@ -18,7 +18,7 @@ public class TablesEndpointRequests extends RestBase {
     public TablesEndpointRequests(EnvironmentProperties environmentProperties) {
         super(environmentProperties);
         pathToTables = environmentProperties.getPathToTables();
-        requestSpecification = getCommonRequestSpecification().basePath(environmentProperties.getPathToExchangeRates() + pathToTables);
+        requestSpecification = commonRequestSpecification.basePath(environmentProperties.getPathToExchangeRates() + pathToTables);
     }
 
     public Response sendGetSpecificTableRequest(Tables tables) {
