@@ -24,9 +24,9 @@ public class TablesEndpointRequests extends RestBase {
     public Response sendGetSpecificTableRequest(Tables tables) {
         return given().
                 spec(requestSpecification).
-                pathParams(pathToTables, tables.getSpecificTableEndpoint()).
+                pathParams(pathToTables, tables.getPathParamValue()).
                 when().
-                get("{" + pathToTables + "}");
+                get(tables.getPathParamName());
     }
 
 }

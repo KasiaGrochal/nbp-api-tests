@@ -22,7 +22,7 @@ public class TablesRequestSteps {
 
     @Given("I send GET table {string} request")
     public void iSendGetTableRequest(String tableType) {
-        response = tablesEndpointRequests.sendGetSpecificTableRequest(Tables.getTableByTableType(tableType));
+        response = tablesEndpointRequests.sendGetSpecificTableRequest(Tables.getTableByPathParamValue(tableType));
         container.response = response;
     }
 }
